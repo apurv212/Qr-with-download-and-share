@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.contain {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#txt {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+
+#txt:focus {
+    border-color: #667eea;
+}
+
+#txt::placeholder {
+    color: #999;
+}
+
+#image {
+    max-width: 150px;
+    margin: 0 auto;
+    display: none;
+}
+
+#image[src] {
+    display: block;
+}
+
+button {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background: #764ba2;
+}
+
+#downloadLink {
+    display: none;
+    text-decoration: none;
+    color: #667eea;
+    font-weight: 500;
+    padding: 10px 20px;
+    border: 2px solid #667eea;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+#downloadLink:hover {
+    background: #667eea;
+    color: white;
+}
+
+@media (max-width: 480px) {
+    .contain {
+        width: 95%;
+        padding: 1.5rem;
+    }
+    
+    button, #downloadLink {
+        width: 100%;
+    }
+}
